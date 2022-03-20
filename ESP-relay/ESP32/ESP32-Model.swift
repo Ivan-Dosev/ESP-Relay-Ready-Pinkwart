@@ -97,13 +97,13 @@ class ESP32Model : ObservableObject{
     func readRelays(){
 
         self.ref.child("DHT11").child("Temperature").observe(.value) { snapshot in
-            if let value = snapshot.value as? Int {
+            if let value = snapshot.value as? Double {
              
                 self.temperature = String(value)
             }
         }
         self.ref.child("DHT11").child("Humidity").observe(.value) { snapshot in
-            if let value = snapshot.value as? Int {
+            if let value = snapshot.value as? Double {
            
                 self.humidity =  String( value)
             }

@@ -51,6 +51,10 @@ struct ESP32View: View {
                                        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                                            self.projectTitle = self.vm.blockArray
                                            createBlock()
+                                           self.vm.relayN1 = false
+                                           self.vm.relayN2 = false
+                                           self.vm.relayN3 = false
+                                           self.vm.relayN4 = false
                                           
                                        }
                                    }
